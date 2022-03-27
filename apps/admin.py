@@ -1,8 +1,13 @@
 from django.contrib import admin
 
-# from apps.models import Profile, Dealer, DealerAddress, Car, CarPrice, Currency
+from .models import Order, Worker
 
 
-# @admin.register(Car, CarPrice)
-# class CarAdmin(admin.ModelAdmin):
-#     pass
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Worker)
+class WorkerAdmin(admin.ModelAdmin):
+    pass
