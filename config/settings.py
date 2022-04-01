@@ -7,7 +7,7 @@ sys.path.append(os.path.join(BASE_DIR, "apps"))
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-DEBUG = os.environ.get('DEBUG', 1)
+DEBUG = os.environ.get('DEBUG', 0)
 
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost 0.0.0.0').split(" ")
 
