@@ -5,11 +5,11 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.join(BASE_DIR, "apps"))
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = 'some key'
 
-DEBUG = os.environ.get('DEBUG', 0)
+DEBUG = 1
 
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost 0.0.0.0').split(" ")
+ALLOWED_HOSTS = ['*']
 
 
 INSTALLED_APPS = [
