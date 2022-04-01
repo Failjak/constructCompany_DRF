@@ -8,7 +8,7 @@ sys.path.append(os.path.join(BASE_DIR, "apps"))
 
 SECRET_KEY = 'some key'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
