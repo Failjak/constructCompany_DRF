@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Order, Worker
+from .models import Order, Worker, Item
 
 
 @admin.register(Order)
@@ -10,4 +10,9 @@ class OrderAdmin(admin.ModelAdmin):
 
 @admin.register(Worker)
 class WorkerAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Item)
+class ItemAdmin(admin.ModelAdmin):
     pass
