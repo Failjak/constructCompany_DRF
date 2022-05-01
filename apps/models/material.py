@@ -2,7 +2,7 @@ from django.db import models
 from djmoney.models.fields import MoneyField
 
 
-class Item(models.Model):
+class Material(models.Model):
     name = models.CharField(max_length=255)
     weight = models.PositiveIntegerField(blank=True, null=True)
     count = models.PositiveIntegerField(blank=True, null=True)

@@ -1,9 +1,9 @@
 from rest_framework.routers import SimpleRouter
 
-from .views import ItemView
+from .views import MaterialView
 
 
 router = SimpleRouter()
-router.register('', ItemView, basename='item')
+router.register('', MaterialView, basename='material')
 
 urlpatterns = router.urls

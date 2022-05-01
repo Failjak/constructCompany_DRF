@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Order, Worker, Item
+from .models import Order, Worker, Material
 
 
 @admin.register(Order)
@@ -13,6 +13,6 @@ class WorkerAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Item)
-class ItemAdmin(admin.ModelAdmin):
+@admin.register(Material)
+class MaterialAdmin(admin.ModelAdmin):
     pass
