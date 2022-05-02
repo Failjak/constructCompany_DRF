@@ -1,13 +1,9 @@
-from rest_framework.mixins import RetrieveModelMixin, ListModelMixin, DestroyModelMixin
-from rest_framework.viewsets import GenericViewSet
+from rest_framework.viewsets import ModelViewSet
 
 from .serializers import MaterialSerializer
 from apps.models import Material
 
 
-class MaterialView(RetrieveModelMixin,
-                   ListModelMixin,
-                   DestroyModelMixin,
-                   GenericViewSet):
+class MaterialView(ModelViewSet):
     serializer_class = MaterialSerializer
     queryset = Material.objects.all()
