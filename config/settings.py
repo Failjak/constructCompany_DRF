@@ -7,9 +7,9 @@ sys.path.append(os.path.join(BASE_DIR, "apps"))
 
 SECRET_KEY = os.environ.get("SECRET_KEY", "tmp-secret")
 
-DEBUG = os.environ.get('DEBUG', 1)
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://be-company.herokuapp.com/', '127.0.0.1']
 
 
 INSTALLED_APPS = [
@@ -30,6 +30,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -103,7 +104,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
