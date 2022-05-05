@@ -5,7 +5,7 @@ from djmoney.models.fields import MoneyField
 class Material(models.Model):
     name = models.CharField(max_length=255)
     weight = models.PositiveIntegerField(blank=True, null=True)
-    count = models.PositiveIntegerField(max_length=5)
+    count = models.PositiveIntegerField()
     price = MoneyField(max_digits=14, decimal_places=2, default_currency='USD')
 
     def __str__(self):
